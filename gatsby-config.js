@@ -7,6 +7,7 @@ module.exports = {
     title: ``,
     siteUrl: `https://www.yourdomain.tld`,
   },
+  pathPrefix: "/johnbarrierwilson",
   plugins: [
     "gatsby-plugin-emotion",
     {
