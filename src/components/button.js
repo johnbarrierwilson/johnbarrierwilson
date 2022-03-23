@@ -1,16 +1,20 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import { theme } from "styled-tools";
+import { darken } from "polished";
 
 const Button = styled.a`
-  background: ${theme("colors.primary")};
-  border-radius: ${theme("radius.m")};
-  color: ${theme("colors.white")};
+  background: ${(p) => p.theme.colors.primary};
+  border-radius: ${(p) => p.theme.radius.m};
+  color: ${(p) => p.theme.colors.white};
   display: inline-block;
   font-weight: 600;
-  margin-right: ${theme("spacing.s")};
-  padding: ${theme("spacing.m")} ${theme("spacing.l")};
+  margin-right: ${(p) => p.theme.spacing.s};
+  padding: ${(p) => p.theme.spacing.m} ${(p) => p.theme.spacing.l};
   text-decoration: none;
+
+  &:hover {
+    background: ${(p) => darken(0.1, p.theme.colors.primary)};
+  }
 `;
 
 const Component = ({ to, children }) => <Button href={to}>{children}</Button>;
