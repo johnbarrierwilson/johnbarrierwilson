@@ -16,7 +16,6 @@ module.exports = {
         trackingId: `${process.env.GOOGLE_ID}`,
       },
     },
-    "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",

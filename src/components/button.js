@@ -1,12 +1,18 @@
 import * as React from "react";
+import styled from "@emotion/styled";
+import { theme } from "styled-tools";
 
-const Button = ({ to, children }) => (
-  <a
-    className="bg-blue-500 block float-left font-semibold mb-3 mr-5 px-7 py-2 rounded-full text-white tracking-wide md:px-10 md:py-3"
-    href={to}
-  >
-    {children}
-  </a>
-);
+const Button = styled.a`
+  background: ${theme("colors.primary")};
+  border-radius: ${theme("radius.m")};
+  color: ${theme("colors.white")};
+  display: inline-block;
+  font-weight: 600;
+  margin-right: ${theme("spacing.s")};
+  padding: ${theme("spacing.m")} ${theme("spacing.l")};
+  text-decoration: none;
+`;
 
-export default Button;
+const Component = ({ to, children }) => <Button href={to}>{children}</Button>;
+
+export default Component;
